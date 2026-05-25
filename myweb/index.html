@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>XXX</title>
+<style>
+  :root {
+    --bg: #fafaf9;
+    --text: #1a1a1a;
+    --text-muted: #888;
+    --border: #e8e5e0;
+    --link: #2563eb;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.8;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .wrapper {
+    max-width: 640px;
+    width: 100%;
+    padding: 80px 24px 48px;
+  }
+
+  /* ---- 头像 ---- */
+  .avatar {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    background: #e5e0d8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    margin-bottom: 24px;
+  }
+
+  /* ---- 名字 & 简介 ---- */
+  h1 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    letter-spacing: -0.5px;
+  }
+  .bio {
+    font-size: 15px;
+    color: var(--text-muted);
+    margin-bottom: 48px;
+    line-height: 1.7;
+  }
+
+  /* ---- 分隔线 ---- */
+  hr {
+    border: none;
+    border-top: 1px solid var(--border);
+    margin: 48px 0;
+  }
+
+  /* ---- 板块标题 ---- */
+  .section-title {
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--text-muted);
+    margin-bottom: 20px;
+  }
+
+  /* ---- 关于 ---- */
+  .about p {
+    font-size: 15px;
+    color: #444;
+    line-height: 1.8;
+  }
+
+  /* ---- 经历 ---- */
+  .exp-item {
+    margin-bottom: 24px;
+  }
+  .exp-item:last-child { margin-bottom: 0; }
+  .exp-item .time {
+    font-size: 13px;
+    color: var(--text-muted);
+    margin-bottom: 2px;
+  }
+  .exp-item h3 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 2px;
+  }
+  .exp-item p {
+    font-size: 14px;
+    color: #555;
+  }
+
+  /* ---- 技能 ---- */
+  .skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .skills span {
+    font-size: 13px;
+    padding: 4px 14px;
+    border-radius: 20px;
+    border: 1px solid var(--border);
+    color: #555;
+    background: #fff;
+  }
+
+  /* ---- 联系 & 二维码 ---- */
+  .contact-row {
+    display: flex;
+    gap: 48px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+  .contact-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    flex: 1;
+    min-width: 200px;
+  }
+  .contact-list .item {
+    font-size: 14px;
+    color: #555;
+  }
+  .contact-list .item strong {
+    font-weight: 500;
+    color: #1a1a1a;
+    display: inline-block;
+    width: 56px;
+  }
+  .contact-list a {
+    color: var(--link);
+    text-decoration: none;
+  }
+  .contact-list a:hover { text-decoration: underline; }
+
+  .qr-box {
+    text-align: center;
+    flex-shrink: 0;
+  }
+  .qr-box canvas {
+    border-radius: 6px;
+    border: 1px solid var(--border);
+  }
+  .qr-box p {
+    font-size: 12px;
+    color: var(--text-muted);
+    margin-top: 8px;
+  }
+
+  /* ---- Footer ---- */
+  footer {
+    font-size: 12px;
+    color: #bbb;
+    text-align: center;
+    padding: 48px 0;
+  }
+
+  @media (max-width: 500px) {
+    .wrapper { padding: 48px 20px 32px; }
+    h1 { font-size: 24px; }
+    .contact-row { flex-direction: column; gap: 28px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="wrapper">
+
+  <!-- Header -->
+  <div class="avatar">👨‍💻</div>
+  <h1>XXX</h1>
+  <p class="bio">
+    前端工程师，专注构建清晰好用的 Web 产品。<br>
+    目前在北京，热爱设计、开源与技术写作。
+  </p>
+
+  <hr>
+
+  <!-- 关于 -->
+  <div class="section-title">About</div>
+  <div class="about">
+    <p>
+      拥有 X 年前端开发经验，擅长 React / Vue / TypeScript 技术栈。
+      关注组件化架构与前端工程化，致力于写出可维护、高性能的代码。
+      工作之余喜欢折腾独立产品，偶尔写技术博客分享踩坑记录。
+    </p>
+  </div>
+
+  <hr>
+
+  <!-- 经历 -->
+  <div class="section-title">Experience</div>
+  <div class="exp-item">
+    <div class="time">2023 — 至今</div>
+    <h3>高级前端工程师 @ XX公司</h3>
+    <p>负责核心业务前端架构，推动组件库与工程化建设。</p>
+  </div>
+  <div class="exp-item">
+    <div class="time">2021 — 2023</div>
+    <h3>前端工程师 @ XX科技</h3>
+    <p>参与多款 SaaS 产品 Web 端开发。</p>
+  </div>
+
+  <hr>
+
+  <!-- 技能 -->
+  <div class="section-title">Skills</div>
+  <div class="skills">
+    <span>React</span>
+    <span>Vue.js</span>
+    <span>TypeScript</span>
+    <span>Next.js</span>
+    <span>Tailwind CSS</span>
+    <span>Node.js</span>
+    <span>Webpack / Vite</span>
+    <span>Git</span>
+  </div>
+
+  <hr>
+
+  <!-- 联系 -->
+  <div class="section-title">Contact</div>
+  <div class="contact-row">
+    <div class="contact-list">
+      <div class="item"><strong>邮箱</strong> <a href="mailto:hello@example.com">hello@example.com</a></div>
+      <div class="item"><strong>GitHub</strong> <a href="https://github.com" target="_blank">github.com/yourname</a></div>
+      <div class="item"><strong>微信</strong> your_wechat_id</div>
+      <div class="item"><strong>位置</strong> 中国 · 北京</div>
+    </div>
+    <div class="qr-box">
+      <div id="qrcode"></div>
+      <p>扫码添加微信</p>
+    </div>
+  </div>
+
+  <footer>© 2026 XXX</footer>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+<script>
+  new QRCode(document.getElementById('qrcode'), {
+    text: 'https://weixin.qq.com',
+    width: 130,
+    height: 130,
+    colorDark: '#1a1a1a',
+    colorLight: '#ffffff',
+  });
+</script>
+
+</body>
+</html>
